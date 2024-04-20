@@ -1,0 +1,14 @@
+Parameters
+Parameter,Value
+Model,microsoft/trocr-small-stage1
+Type of Dataset,original
+Training Size,880
+Validation Size,220
+Batch Size,8
+Epochs,10
+Learning Rate,0.001
+
+Metrics
+Metric,Value
+Accuracy,93.18%
+Average Latency,0.10 seconds
