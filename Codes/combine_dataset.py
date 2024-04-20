@@ -2,6 +2,20 @@ import os
 import shutil
 
 def combine_datasets(input_folders, output_folder):
+    """
+    Combine multiple dataset folders into a single folder.
+
+    This function takes a list of input folders containing datasets and merges them into a single output folder. 
+    It iterates over each input folder, copies all files from each folder to the output folder, and maintains 
+    the directory structure.
+
+    Args:
+        input_folders (list): A list of strings, each representing the path to an input dataset folder.
+        output_folder (str): The path to the output folder where the combined dataset will be stored.
+
+    Returns:
+        None
+    """
     # Create the output folder if it doesn't exist
     os.makedirs(output_folder, exist_ok=True)
     
