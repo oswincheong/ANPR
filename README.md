@@ -6,6 +6,10 @@ This repository contains code for Automatic Number Plate Recognition (ANPR) task
 
 ANPR is a technology that uses optical character recognition on images to read vehicle registration plates. This repository provides a solution for ANPR tasks, leveraging Tr-OCR.
 
+## Links
+[Tr-OCR Documentation](https://huggingface.co/docs/transformers/v4.40.0/en/model_doc/trocr#overview) 
+[Fine-Tuning Tr-OCR video](https://www.youtube.com/watch?v=-8a7j6EVjs0)
+
 ## Features
 
 - **Tr-OCR Integration**: Utilizes Tr-OCR for robust optical character recognition.
@@ -18,4 +22,4 @@ ANPR is a technology that uses optical character recognition on images to read v
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/your-repo.git
+   git clone https://github.com/OSWINCHEONG/ANPR.git
