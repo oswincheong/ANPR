@@ -1,0 +1,16 @@
+trocr-small-stage1_combined.csv,
+,
+Parameters,
+Parameter,Value
+Model,microsoft/trocr-small-stage1
+Type of Dataset,combined
+Training Size,1758
+Validation Size,440
+Batch Size,8
+Epochs,10
+Learning Rate,0.001
+,
+Metrics,
+Metric,Value
+Accuracy,81.14%
+Average Latency,95.89698043736544 ms
