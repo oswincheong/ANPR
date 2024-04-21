@@ -22,4 +22,4 @@ ANPR is a technology that uses optical character recognition on images to read v
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/OSWINCHEONG/ANPR.git
+   git clone https://github.com/oswincheong/ANPR.git
