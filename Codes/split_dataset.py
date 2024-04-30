@@ -7,7 +7,7 @@ def split_dataset():
 
     # Create two new folders for the split
     train_folder = os.path.join(original_folder, 'train')
-    test_folder = os.path.join(original_folder, 'test')
+    test_folder = os.path.join(original_folder, 'valid')
     os.makedirs(train_folder, exist_ok=True)
     os.makedirs(test_folder, exist_ok=True)
 
