@@ -1,0 +1,16 @@
+trocr-small-printed_original.csv
+
+Parameters
+Parameter,Value
+Model,microsoft/trocr-small-printed
+Type of Dataset,original
+Training Size,63
+Validation Size,17
+Batch Size,8
+Epochs,20
+Learning Rate,0.001
+
+Metrics
+Metric,Value
+Accuracy,5.88%
+Average Latency,70.41091077467975 ms

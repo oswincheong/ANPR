@@ -1,0 +1,17 @@
+trocr-small-printed_warped.csv
+
+Parameters
+Parameter,Value
+Model,microsoft/trocr-small-printed
+Type of Dataset,warped
+Training Size,878
+Validation Size,109
+Test Size,109
+Batch Size,8
+Epochs,20
+Learning Rate,0.001
+
+Metrics
+Metric,Value
+Accuracy,3.67%
+Average Latency,69.46017107832323 ms
