@@ -1,0 +1,36 @@
+trocr-small-printed original run1
+
+Parameters
+Parameter,Value
+Model,microsoft/trocr-small-printed
+Type of Dataset,original
+Training Size,63
+Validation Size,17
+Test Size,17
+Batch Size,8
+Epochs,20
+Learning Rate,0.0001
+
+Metrics
+Metric,Value
+Accuracy,5.88%
+Average Latency,77.37465465770048 ms
+
+Character Error Rates
+Character,Error Rate
+1,0.00
+2,0.50
+3,0.17
+4,0.75
+6,0.50
+7,0.33
+8,0.00
+9,0.75
+A,0.00
+H,0.33
+L,0.71
+S,1.00
+V,0.00
+W,0.00
+
+Plot saved as:,cer.png

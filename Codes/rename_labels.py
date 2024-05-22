@@ -9,7 +9,7 @@ with open(input_file_path, "r") as input_file:
     data = input_file.read()
 
 # Replace all occurrences of "original" with "warped"
-modified_data = data.replace("warped", "combined")
+modified_data = data.replace("original", "warped")
 
 # Write the modified content to the output file
 with open(output_file_path, "w") as output_file:
