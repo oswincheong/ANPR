@@ -65,6 +65,24 @@ def split_labels_balanced(df, train_size=0.8, val_size=0.1, test_size=0.1, rando
     # Return the dataframes
     return train_df, val_df, test_df
 
+# Count images per label
+def count_images_per_label(df):
+    label_counts = Counter(df['true_label'])
+    return label_counts
+
+# Delete excess images for each label
+def delete_excess_images(df, max_images_per_label, image_folder):
+    label_counts = count_images_per_label(df)
+    for label, count in label_counts.items():
+        if count > max_images_per_label:
+            excess_count = count - max_images_per_label
+            excess_images = df[df['true_label'] == label].head(excess_count)
+            for _, row in excess_images.iterrows():
+                image_path = os.path.join(image_folder, row['file_name'])
+                os.remove(image_path)
+            df = df.drop(excess_images.index)
+    return df
+
 # Copy images to respective folders
 def copy_images(df, src_folder, dest_folder):
     os.makedirs(dest_folder, exist_ok=True)
@@ -77,20 +95,27 @@ def copy_images(df, src_folder, dest_folder):
 def main():
     file_path = input("Enter the path to the text file containing the labels: ")
     image_folder = input("Enter the path to the folder containing the images: ")
+    max_images_per_label = int(input("Enter the maximum number of images per label: "))
     output_folder = os.path.dirname(file_path)
 
+    # Read labels and delete excess images
     df = read_labels(file_path)
+    df = delete_excess_images(df, max_images_per_label, image_folder)
+
+    # Split the data into train, val, and test sets
     train_df, val_df, test_df = split_labels_balanced(df)
 
+    # Save the split labels to text files
     train_df.to_csv(os.path.join(output_folder, 'train.txt'), sep='\t', index=False, header=False)
     val_df.to_csv(os.path.join(output_folder, 'val.txt'), sep='\t', index=False, header=False)
     test_df.to_csv(os.path.join(output_folder, 'test.txt'), sep='\t', index=False, header=False)
 
+    # Copy images to their respective folders
     copy_images(train_df, image_folder, os.path.join(output_folder, 'train'))
     copy_images(val_df, image_folder, os.path.join(output_folder, 'val'))
     copy_images(test_df, image_folder, os.path.join(output_folder, 'test'))
 
-    print("Data has been split and saved to train.txt, val.txt, and test.txt")
+    print("Excess images deleted, data split and saved to train.txt, val.txt, and test.txt")
     print("Images have been copied to train, val, and test folders")
 
 if __name__ == "__main__":
