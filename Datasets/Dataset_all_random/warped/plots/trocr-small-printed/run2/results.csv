@@ -1,0 +1,49 @@
+trocr-small-printed warped run2
+
+Parameters
+Parameter,Value
+Model,microsoft/trocr-small-printed
+Dataset,Dataset_all_random
+Type of Dataset,warped
+Training Size,1317
+Validation Size,162
+Test Size,162
+Batch Size,8
+Epochs,20
+Learning Rate,0.0001
+
+Metrics
+Metric,Value
+Accuracy,97.56%
+Average Latency,82.68 ms
+Precision,0.98
+Recall,0.98
+F1 Score,0.98
+
+Character Error Rates
+Character,Error Rate
+1,0.00
+2,0.00
+3,0.01
+4,0.00
+5,0.05
+6,0.33
+7,0.00
+8,0.00
+9,0.02
+A,0.00
+B,0.02
+H,0.00
+J,0.00
+L,0.00
+M,0.00
+N,0.00
+P,0.00
+Q,0.00
+T,0.00
+V,0.00
+W,0.00
+X,0.00
+Y,0.00
+
+Plot saved as:,cer.png
